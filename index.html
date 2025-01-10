@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <title>Web Solar System</title>
+
+        <link href="main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Web Solar System</h1>
+        <h2>See where the eight planets of the solar system are.</h2>
+        <div id="divTime">
+            <input id="inputDate" type="date" min="1800-01-01" max="2049-12-31" step="1" required />
+            <input id="inputTime" type="time" step="1" required />
+            <select id="selectTimezone" name="timezone">
+                <option value=-11>UTC-11</option>
+                <option value=-10>UTC-10</option>
+                <option value=-9>UTC-9</option>
+                <option value=-8>UTC-8</option>
+                <option value=-7>UTC-7</option>
+                <option value=-6>UTC-6</option>
+                <option value=-5>UTC-5</option>
+                <option value=-4>UTC-4</option>
+                <option value=-3>UTC-3</option>
+                <option value=-2>UTC-2</option>
+                <option value=-1>UTC-1</option>
+                <option value=0 selected>UTC+0</option>
+                <option value=1>UTC+1</option>
+                <option value=2>UTC+2</option>
+                <option value=3>UTC+3</option>
+                <option value=4>UTC+4</option>
+                <option value=5>UTC+5</option>
+                <option value=6>UTC+6</option>
+                <option value=7>UTC+7</option>
+                <option value=8>UTC+8</option>
+                <option value=9>UTC+9</option>
+                <option value=10>UTC+10</option>
+                <option value=11>UTC+11</option>
+                <option value=12>UTC+12</option>
+            </select>
+            <input id="checkboxNow" type="checkbox" name="setTimeToNow" />
+            <label for="checkboxNow">Now</label>
+            <span id="spanUTC">UTC Time</span>
+        </div>
+        <table>
+            <caption>Approximate Positions of the Planets</caption>
+            <thead>
+                <tr>
+                    <th scope="col" id="thPlanets">Planets</th>
+                    <th scope="col" id="thX">x au</th>
+                    <th scope="col" id="thY">y au</th>
+                    <th scope="col" id="thZ">z au</th>
+                    <th scope="col" id="thLambda">&lambda; deg</th>
+                    <th scope="col" id="thPhi">&Phi; deg</th>
+                    <th scope="col" id="thRho">&rho; au</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="trMercury">
+                    <th scope="row" headers="Planets">Mercury</th>
+                    <td id="tdMercuryX" headers="thX"></td>
+                    <td id="tdMercuryY" headers="thY"></td>
+                    <td id="tdMercuryZ" headers="thZ"></td>
+                    <td id="tdMercuryLambda" headers="thLambda"></td>
+                    <td id="tdMercuryPhi" headers="thPhi"></td>
+                    <td id="tdMercuryRho" headers="thRho"></td>
+                </tr>
+                <tr id="trVenus">
+                    <th scope="row" headers="Planets">Venus</th>
+                    <td id="tdVenusX" headers="thX"></td>
+                    <td id="tdVenusY" headers="thY"></td>
+                    <td id="tdVenusZ" headers="thZ"></td>
+                    <td id="tdVenusLambda" headers="thLambda"></td>
+                    <td id="tdVenusPhi" headers="thPhi"></td>
+                    <td id="tdVenusRho" headers="thRho"></td>
+                </tr>
+                <tr id="trEMBary">
+                    <th scope="row" headers="Planets">EM Bary</th>
+                    <td id="tdEMBaryX" headers="thX"></td>
+                    <td id="tdEMBaryY" headers="thY"></td>
+                    <td id="tdEMBaryZ" headers="thZ"></td>
+                    <td id="tdEMBaryLambda" headers="thLambda"></td>
+                    <td id="tdEMBaryPhi" headers="thPhi"></td>
+                    <td id="tdEMBaryRho" headers="thRho"></td>
+                </tr>
+                <tr id="trMars">
+                    <th scope="row" headers="Planets">Mars</th>
+                    <td id="tdMarsX" headers="thX"></td>
+                    <td id="tdMarsY" headers="thY"></td>
+                    <td id="tdMarsZ" headers="thZ"></td>
+                    <td id="tdMarsLambda" headers="thLambda"></td>
+                    <td id="tdMarsPhi" headers="thPhi"></td>
+                    <td id="tdMarsRho" headers="thRho"></td>
+                </tr>
+                <tr id="trJupiter">
+                    <th scope="row" headers="Planets">Jupiter</th>
+                    <td id="tdJupiterX" headers="thX"></td>
+                    <td id="tdJupiterY" headers="thY"></td>
+                    <td id="tdJupiterZ" headers="thZ"></td>
+                    <td id="tdJupiterLambda" headers="thLambda"></td>
+                    <td id="tdJupiterPhi" headers="thPhi"></td>
+                    <td id="tdJupiterRho" headers="thRho"></td>
+                </tr>
+                <tr id="trSaturn">
+                    <th scope="row" headers="Planets">Saturn</th>
+                    <td id="tdSaturnX" headers="thX"></td>
+                    <td id="tdSaturnY" headers="thY"></td>
+                    <td id="tdSaturnZ" headers="thZ"></td>
+                    <td id="tdSaturnLambda" headers="thLambda"></td>
+                    <td id="tdSaturnPhi" headers="thPhi"></td>
+                    <td id="tdSaturnRho" headers="thRho"></td>
+                </tr>
+                <tr id="trUranus">
+                    <th scope="row" headers="Planets">Uranus</th>
+                    <td id="tdUranusX" headers="thX"></td>
+                    <td id="tdUranusY" headers="thY"></td>
+                    <td id="tdUranusZ" headers="thZ"></td>
+                    <td id="tdUranusLambda" headers="thLambda"></td>
+                    <td id="tdUranusPhi" headers="thPhi"></td>
+                    <td id="tdUranusRho" headers="thRho"></td>
+                </tr>
+                <tr id="trNeptune">
+                    <th scope="row" headers="Planets">Neptune</th>
+                    <td id="tdNeptuneX" headers="thX"></td>
+                    <td id="tdNeptuneY" headers="thY"></td>
+                    <td id="tdNeptuneZ" headers="thZ"></td>
+                    <td id="tdNeptuneLambda" headers="thLambda"></td>
+                    <td id="tdNeptunePhi" headers="thPhi"></td>
+                    <td id="tdNeptuneRho" headers="thRho"></td>
+                </tr>    
+            </tbody>
+        </table>
+        <p>Reference: <a href="https://ssd.jpl.nasa.gov/planets/approx_pos.html">Approximate Positions of the Planets - Jet Propulsion Laboratory</a></p>
+        <script src="main.js"></script>
+    </body>
+</html>
