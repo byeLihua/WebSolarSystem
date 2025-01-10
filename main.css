@@ -1,0 +1,24 @@
+/* table */
+table{
+    border: 2px solid;
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid;
+    font-size: 1em;
+}
+th{
+    width: 6em;
+}
+td[headers="thX"], td[headers="thY"], td[headers="thZ"]{
+    text-align: end;
+    width: 7em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+td[headers="thLambda"], td[headers="thPhi"], td[headers="thRho"]{
+    text-align: start;
+    width: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
